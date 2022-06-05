@@ -26,8 +26,9 @@ const Task = () => {
         //document.getElementById("connection-section").classList.remove("d-none");
         //document.getElementById("connection-section").classList.add("animate__fadeInUp");
     }
-    const connectwallet = ()=>{
-        console.log("connect your wallet code");
+    const follow_twitter = (e)=>{
+        e.preventDefault();
+        console.log("follow twitter account");
     }
     const verifydiscord = ()=>{
         console.log("verify your discord");
@@ -47,9 +48,10 @@ const Task = () => {
                         </video>
                         </div>
                         <div id="tasks-section" className='d-none animate__animated animate__delay-1s'>
+                        <div className='tasks-inner'>
                             <h4>COMPLETE YOUR TASKS BELOW TO<br/>
                             EARN YOUR ARCADE TOKENS… <br/>
-                            STAY TUNED TO FIND OUT WHERE YOU CAN SPEND
+                            STAY TUNED TO FIND OUT WHERE YOU CAN SPEND<br/>
                             THEM IN THE NEAR FUTURE ;) ////////
                             </h4>
                             <div className='tasks-list'>
@@ -65,8 +67,8 @@ const Task = () => {
                                 <div className='col-sm-6'>
                                     <div className='list-item row align-items-center'>
                                     <div className="col-2 text-center">1</div>
-                                    <div className="col-7 p-0">Follow our official Twitter account!</div>
-                                    <div className="d-flex col-3 align-items-center">
+                                    <div className="col-8 p-0"><a href="" onClick={follow_twitter}>Follow our official Twitter account!</a></div>
+                                    <div className="d-flex col-2 align-items-center">
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
@@ -74,8 +76,8 @@ const Task = () => {
                                     </div>
                                     <div className='list-item row align-items-center'>
                                     <div className="text-center col-2">2</div>
-                                    <div className="col-7 p-0">Follow our Founder!</div>
-                                    <div className="d-flex col-3 align-items-center">
+                                    <div className="col-8 p-0">Follow our Founder!</div>
+                                    <div className="d-flex col-2 align-items-center">
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
@@ -83,8 +85,8 @@ const Task = () => {
                                     </div>
                                     <div className='list-item row align-items-center'>
                                     <div className="text-center col-2">3</div>
-                                    <div className="col-7 p-0">Show some love!</div>
-                                    <div className="d-flex col-3 align-items-center">
+                                    <div className="col-8 p-0">Show some love!</div>
+                                    <div className="d-flex col-2 align-items-center">
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
@@ -92,8 +94,8 @@ const Task = () => {
                                     </div>
                                     <div className='list-item row align-items-center'>
                                     <div className="text-center col-2">4</div>
-                                    <div className="col-7 p-0">TWEET AT US</div>
-                                    <div className="d-flex col-3 align-items-center">
+                                    <div className="col-8 p-0">TWEET AT US</div>
+                                    <div className="d-flex col-2 align-items-center">
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
@@ -104,8 +106,8 @@ const Task = () => {
                                 <div className='col-sm-6 items-list-col-2'>
                                     <div className='list-item row align-items-center'>
                                         <div className="text-center col-2">5</div>
-                                        <div className="col-7 p-0">Refer Your Friends!</div>
-                                        <div className="d-flex col-3 align-items-center">
+                                        <div className="col-8 p-0">Refer Your Friends!</div>
+                                        <div className="d-flex col-2 align-items-center">
                                             <h5 className='points'>+1</h5>
                                             <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
                                             <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
@@ -118,7 +120,7 @@ const Task = () => {
                             </div>
                             </div>
                         </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>

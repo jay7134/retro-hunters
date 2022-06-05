@@ -252,6 +252,7 @@ p{
 .connection-buttons .button-connected .token-info{
   display: none;
 }
+.list-item .connected,
 .connection-buttons .button-connected .connect,
 .connection-buttons .connected{
   visibility: hidden;
@@ -291,6 +292,14 @@ p{
   margin-top: 0px;
   max-width: 620px;
 }
+#tasks-section{
+  background-image: url('../public/images/RH-ref.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#tasks-section .tasks-inner{
+  padding: 15px 30px 10px;
+}
 #tasks-section h4{
   font-family: var(--fontfamily);
   font-weight: 400;
@@ -329,8 +338,12 @@ p{
   line-height: 17px;
   color: #62E3DB;
   border-bottom: 1px solid #62E3DB;
-  padding: 15px 10px;
+  padding: 15px 25px 15px 0px;
   min-height: 85px;
+}
+.task-listing .list-item a {
+  color: #62E3DB;
+  text-decoration: none;
 }
 .task-listing .list-item:last-child{
   border-bottom: 0px solid #62E3DB;
