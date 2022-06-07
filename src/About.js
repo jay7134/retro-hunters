@@ -1,6 +1,9 @@
 import React from 'react';
 const About = () => {
     return(
+        <>
+        <img id='bg_img' className='img-fluid' src='/images/bg.jpg' alt='retro hunters bg' width={1920} height={1080} />
+        
         <section id="about" className="sec-pad-lg">
             <div className="container">
                 <div className="row about-us align-items-center">
@@ -38,6 +41,7 @@ const About = () => {
                 </div>
             </div>
         </section>
+    </>
     );
 }
 export default About;

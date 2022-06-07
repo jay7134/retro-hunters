@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Header from './Header';
 import Roadmap from './Roadmap';
 import About from './About';
@@ -17,6 +16,8 @@ function App() {
     <div className="App">
     <Routes>
         <Route path="/" element={<Header/>}/>
+        <Route path="/about" element={<Header/>}/>
+        <Route path="/roadmap" element={<Header/>}/>
     </Routes>    
       <div className="page-content">
       <Routes>

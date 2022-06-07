@@ -249,8 +249,9 @@ p{
   color: #FFAB60 !important;
   box-shadow: 0px 4px 50px rgba(255, 171, 96, 0.4);
 }
+.list-item.connected .task-info,
 .connection-buttons .button-connected .token-info{
-  display: none;
+  display: none !important;
 }
 .list-item .connected,
 .connection-buttons .button-connected .connect,
@@ -258,6 +259,7 @@ p{
   visibility: hidden;
   width: 0px;
 }
+.list-item.connected .connected,
 .connection-buttons .button-connected .connected{
   visibility: visible;
   width: auto;
@@ -341,9 +343,17 @@ p{
   padding: 15px 25px 15px 0px;
   min-height: 85px;
 }
+.task-listing .list-item.connected a,
+.task-listing .list-item.connected{
+  color: #FFAB60;
+}
 .task-listing .list-item a {
   color: #62E3DB;
   text-decoration: none;
+}
+.task-listing .list-item.connected a[disabled="disabled"] {
+  pointer-events: none;
+  cursor: default;
 }
 .task-listing .list-item:last-child{
   border-bottom: 0px solid #62E3DB;
@@ -371,6 +381,58 @@ p{
 }
 .items-list-col-2 .list-item:last-child{
   border-bottom: 1px solid #62E3DB;
+}
+.roadmap-title{
+  font-family: var(--fontfamily);
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 40px rgba(96, 212, 218, 0.4);
+  padding-bottom: 60px;
+}
+.roadmap-title span{
+  background: rgba(244, 72, 202, 0.2);
+  border: 1px solid #FF2ACC;
+  backdrop-filter: blur(8px);
+  padding: 20px 40px;
+}
+#roadmap .sub-title{
+  font-family: var(--fontfamily2);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 40px rgba(96, 212, 218, 0.4);
+  margin-bottom: 35px;
+}
+.roadmap-box{
+  background: rgba(17, 55, 57, 0.7);
+  border: 1px solid #60D4DA;
+  padding: 35px 20px;
+  margin-bottom: 30px;
+}
+.roadmap-box h4{
+  font-family: var(--fontfamily2);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 40px rgba(96, 212, 218, 0.4);
+  margin-bottom: 30px;
+}
+.roadmap-box  img{
+  margin-top: -40px;
+}
+.about-us h2{
+  font-family: var(--fontfamily);
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 40px rgba(96, 212, 218, 0.4);
+  max-width: 460px;
+  margin-bottom: 25px;
 }
 @media(min-width: 768px){
 

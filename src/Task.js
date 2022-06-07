@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 const Task = () => {
     const [tokenBalance, settokenBalance] = useState(0);
     //const [connect, setconnect] = useState("");
@@ -28,10 +29,21 @@ const Task = () => {
     }
     const follow_twitter = (e)=>{
         e.preventDefault();
+        $(document).on( 'click', '#follow_twitter', function () {
+            $(this).parents(".list-item").addClass("connected");
+            settokenBalance(tokenBalance+1);
+            $(this).attr("disabled", "disabled");
+        });
         console.log("follow twitter account");
     }
-    const verifydiscord = ()=>{
-        console.log("verify your discord");
+    const follow_founder = (e)=>{
+        e.preventDefault();
+        $(document).on( 'click', '#follow_founder', function () {
+            $(this).parents(".list-item").addClass("connected");
+            settokenBalance(tokenBalance+1);
+            $(this).attr("disabled", "disabled");
+        });
+        console.log("follow our founder!");
     }
     return(
         <>
@@ -67,19 +79,23 @@ const Task = () => {
                                 <div className='col-sm-6'>
                                     <div className='list-item row align-items-center'>
                                     <div className="col-2 text-center">1</div>
-                                    <div className="col-8 p-0"><a href="" onClick={follow_twitter}>Follow our official Twitter account!</a></div>
+                                    <div className="col-8 p-0"><a id="follow_twitter" href="" onClick={follow_twitter}>Follow our official Twitter account!</a></div>
                                     <div className="d-flex col-2 align-items-center">
+                                        <span className='task-info d-flex align-items-center'>
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
+                                        </span>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
                                     </div>
                                     </div>
                                     <div className='list-item row align-items-center'>
                                     <div className="text-center col-2">2</div>
-                                    <div className="col-8 p-0">Follow our Founder!</div>
+                                    <div className="col-8 p-0"><a id="follow_founder" href="" onClick={follow_founder}>Follow our Founder!</a></div>
                                     <div className="d-flex col-2 align-items-center">
+                                        <span className='task-info d-flex align-items-center'>
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
+                                        </span>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
                                     </div>
                                     </div>
@@ -87,8 +103,10 @@ const Task = () => {
                                     <div className="text-center col-2">3</div>
                                     <div className="col-8 p-0">Show some love!</div>
                                     <div className="d-flex col-2 align-items-center">
+                                        <span className='task-info d-flex align-items-center'>
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
+                                        </span>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
                                     </div>
                                     </div>
@@ -96,8 +114,10 @@ const Task = () => {
                                     <div className="text-center col-2">4</div>
                                     <div className="col-8 p-0">TWEET AT US</div>
                                     <div className="d-flex col-2 align-items-center">
+                                        <span className='task-info d-flex align-items-center'>
                                         <h5 className='points'>+1</h5>
                                         <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
+                                        </span>
                                         <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
                                     </div>
                                     </div>
@@ -108,8 +128,10 @@ const Task = () => {
                                         <div className="text-center col-2">5</div>
                                         <div className="col-8 p-0">Refer Your Friends!</div>
                                         <div className="d-flex col-2 align-items-center">
+                                            <span className='task-info d-flex align-items-center'>
                                             <h5 className='points'>+1</h5>
                                             <img src="/images/token.svg" alt="+1 token" width={32} height={32}/>
+                                            </span>
                                             <img className="connected" src="/images/connected-tick.svg" alt="account connected" width={23} height={16}/>
                                         </div>
                                     </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 function Header() {
     return (	
 	<div className="main-wrapper overflow-hidden">
@@ -28,16 +28,16 @@ function Header() {
 				<ul className="navbar-nav col-12 col-md-auto justify-content-center main-menu">
 
 					<li className="nav-item">
-						<Link to="/about" className="nav-link">About</Link>
+						<Link to="/about" className='nav-link'>About</Link>
 					</li>
                     <li className="nav-item">
-						<Link to="/roadmap" className="nav-link">Roadmap</Link>
+						<Link to="/roadmap" className="nav-link" >Roadmap</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/" className="nav-link">Whitepaper</Link>
+						<Link to="/whitepaper" className="nav-link">Whitepaper</Link>
 					</li>
                     <li className="nav-item">
-						<Link to="/" className="nav-link">Account</Link>
+						<Link to="/account" className="nav-link">Account</Link>
 					</li>
 					<li className="mob_nav action-btns d-none d-lg-block">
 					<a href="https://twitter.com/" rel="me" target="_blank" className="btn btn-link text-decoration-none me-2 social-link">
