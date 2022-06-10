@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import "./Join_the_hunt.css";
 const Join_the_hunt = () => {
     //const [refCode, setrefCode] = useState("");
     //const [connect, setconnect] = useState("");
@@ -37,7 +38,7 @@ const Join_the_hunt = () => {
         <img id='bg_img' className='img-fluid' src='/images/bg-3.jpg' alt='retro hunters bg' width={1920} height={1080} />
         <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-center vh-100">
                     <div className='col-md-8 offset-md-2'>
                         
                         <div id="join-box" className='d-none animate__animated animate__delay-2s'>

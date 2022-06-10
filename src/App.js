@@ -8,6 +8,7 @@ import Join_the_hunt from './Join-the-hunt';
 import Home from './Home';
 import 'animate.css';
 import Task from './Task';
+import Arcade from './Arcade';
 function App() {
   return (
     <>
@@ -15,17 +16,18 @@ function App() {
     <Fragment>
     <div className="App">
     <Routes>
-        <Route path="/" element={<Header/>}/>
+        <Route exact path="/" element={<Header/>}/>
         <Route path="/about" element={<Header/>}/>
         <Route path="/roadmap" element={<Header/>}/>
     </Routes>    
       <div className="page-content">
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route exact path="/" element={<Home/>}/>
         <Route path="/roadmap" element={<Roadmap/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/join-the-hunt" element={<Join_the_hunt/>}/>
         <Route path="/task" element={<Task/>}/>
+        <Route path="/arcade" element={<Arcade/>}/>
       </Routes>
       
       </div>

@@ -45,13 +45,48 @@ const Task = () => {
         });
         console.log("follow our founder!");
     }
+    const show_love = (e)=>{
+        e.preventDefault();
+        $(document).on( 'click', '#show_love', function () {
+            $(this).parents(".list-item").addClass("connected");
+            settokenBalance(tokenBalance+1);
+            $(this).attr("disabled", "disabled");
+        });
+        console.log("Show some love!");
+    }
+    const tweet_us = (e)=>{
+        e.preventDefault();
+        $(document).on( 'click', '#tweet_us', function () {
+            $(this).parents(".list-item").addClass("connected");
+            settokenBalance(tokenBalance+1);
+            $(this).attr("disabled", "disabled");
+        });
+        console.log("Tweet us!");
+    }
+    const refer_friends = (e)=>{
+        e.preventDefault();
+        $(document).on( 'click', '#refer_friends', function () {
+            $(this).parents(".list-item").addClass("connected");
+            settokenBalance(tokenBalance+1);
+            $(this).attr("disabled", "disabled");
+        });
+        console.log("Refer friends!");
+    }
+    const copy_code = (e)=>{
+        e.preventDefault();
+        $(document).on( 'click', '#copy_code', function () {
+            const referral_code = $(".user-referral-code").text();
+            navigator.clipboard.writeText(referral_code);
+        });
+        console.log("code copied to clipboard");
+    }
     return(
         <>
         <img id='bg_img' className='img-fluid' src='/images/RH-task-bg-1.jpg' alt='retro hunters bg' width={1920} height={1080} />
         
         <section id="task" className="rh-task">
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-center vh-100 align-middle">
                     <div className='col-md-8 offset-md-2'>
                         
                         <div id="clown-box" className='section-clown animate__animated animate__zoomIn animate__delay-2s'>
@@ -101,7 +136,7 @@ const Task = () => {
                                     </div>
                                     <div className='list-item row align-items-center'>
                                     <div className="text-center col-2">3</div>
-                                    <div className="col-8 p-0">Show some love!</div>
+                                    <div className="col-8 p-0"><a id="show_love" href="" onClick={show_love}>Show some love!</a></div>
                                     <div className="d-flex col-2 align-items-center">
                                         <span className='task-info d-flex align-items-center'>
                                         <h5 className='points'>+1</h5>
@@ -112,7 +147,7 @@ const Task = () => {
                                     </div>
                                     <div className='list-item row align-items-center'>
                                     <div className="text-center col-2">4</div>
-                                    <div className="col-8 p-0">TWEET AT US</div>
+                                    <div className="col-8 p-0"><a id="tweet_us" href="" onClick={tweet_us}>TWEET AT US</a></div>
                                     <div className="d-flex col-2 align-items-center">
                                         <span className='task-info d-flex align-items-center'>
                                         <h5 className='points'>+1</h5>
@@ -126,7 +161,7 @@ const Task = () => {
                                 <div className='col-sm-6 items-list-col-2'>
                                     <div className='list-item row align-items-center'>
                                         <div className="text-center col-2">5</div>
-                                        <div className="col-8 p-0">Refer Your Friends!</div>
+                                        <div className="col-8 p-0"><a id="refer_friends" href="" onClick={refer_friends}>Refer Your Friends!</a></div>
                                         <div className="d-flex col-2 align-items-center">
                                             <span className='task-info d-flex align-items-center'>
                                             <h5 className='points'>+1</h5>
@@ -138,6 +173,11 @@ const Task = () => {
                                     <div className='list-item row align-items-center'>
                                         <h3>each referral will grant one token for yourself, as well as the referred party</h3>
                                     </div>
+                                    { tokenBalance == 5 &&
+                                    <div className='list-item row align-items-center referral-code'>
+                                        <h3><span className='user-referral-code'>A12SA231ZDAS</span> <a href='' id="copy_code" className='text-end' onClick={copy_code}>COPY CODE</a></h3>
+                                    </div>
+                                    }
                                 </div>
                             </div>
                             </div>
