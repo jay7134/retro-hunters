@@ -19,7 +19,7 @@ const About = () => {
         
         <section id="about" className="sec-pad-lg">
             <div className="container">
-                <div className="row about-us align-items-center">
+                <div className="row about-us align-items-center vh-100 align-middle">
                     <div className="col-md-3">
                     <img className='img-fluid animate__animated animate__fadeInLeft' src="/images/about-2.jpg" alt="discord" width="240"/>
                     </div>
