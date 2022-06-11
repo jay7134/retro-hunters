@@ -1,9 +1,9 @@
 import React, {useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import "./Join_the_hunt.css";
 const Join_the_hunt = () => {
     //const [refCode, setrefCode] = useState("");
     //const [connect, setconnect] = useState("");
+    /*
     useEffect(() => {
         const timer = setTimeout(() => {
             document.getElementById("bg_img").src="/images/join_hunt_1.jpg";
@@ -12,11 +12,18 @@ const Join_the_hunt = () => {
             document.getElementById("join-box").classList.remove("d-none");
         }, 2000);
         return () => clearTimeout(timer);
-    }, []);
-
+    }, []);*/
+    const join_hunt = () => {
+        document.getElementById("join-the-hunt-into").classList.add("d-none");
+        document.getElementById("bg_img").classList.remove("d-none");
+        document.getElementById("bg_img").src="/images/join_hunt_1.jpg";
+        document.getElementById("join-box").classList.add("animate__fadeInUp");
+        document.getElementById("bg_img").src="/images/join_hunt_2.jpg";
+        document.getElementById("join-box").classList.remove("d-none");
+        document.getElementById("return-back").classList.remove("d-none");
+    }
     const setReferralCode = ()=>{
         console.log("entered referral code");
-
     }
     const noReferralCode = (e)=>{
         e.preventDefault();
@@ -35,7 +42,13 @@ const Join_the_hunt = () => {
     }
     return(
         <>
-        <img id='bg_img' className='img-fluid' src='/images/bg-3.jpg' alt='retro hunters bg' width={1920} height={1080} />
+        <div className='join-the-hunt-into' id='join-the-hunt-into'>
+        <video className="RH-entry-video" autoPlay muted>
+            <source src="/videos/RH-entry.mp4" type='video/mp4' />
+        </video>
+        <button className='btn btn-join-hunt' onClick={join_hunt}>Join the hunt</button>
+        </div>
+        <img id='bg_img' className='img-fluid d-none' src='/images/bg-3.jpg' alt='retro hunters bg' width={1920} height={1080} />
         <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
                 <div className="row align-items-center vh-100">
@@ -86,7 +99,7 @@ const Join_the_hunt = () => {
                 </div>
             </div>
         </section>
-        <div className='return-back animate__animated animate__slideInLeft animate__delay-4s'>
+        <div id="return-back" className='return-back animate__animated animate__slideInLeft d-none'>
             <h5><Link to="/">RETURN TO WEBSITE</Link></h5>
         </div>
         </>

@@ -85,16 +85,6 @@ p{
   padding: 10px 20px;
 }
 /*== Content Body ==*/
-.page-content{
-  padding-top: 100px;
-}
-#Home .row{
-    position: absolute;
-    width: 89%;
-    bottom: 50px;
-    max-width: 100%;
-    margin: 0 auto;
-}
 .heading-text a{
   font-family: var(--fontfamily);
   font-weight: 400;
@@ -109,11 +99,35 @@ p{
   position: fixed;
   right: 0;
   bottom: 0;
+  left: 0px;
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+  width: 100%;
+}
+.enter-website-links{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  bottom: 30%;
+}
+.enter-website-links a{
+  color: transparent;
+  padding: 25px 0px;
 }
 /*== Join the hunt ==*/
+.btn-join-hunt {
+  position: absolute;
+  bottom: 5%;
+  right: 4%;
+  width: 300px;
+  padding: 40px;
+  color: rgba(255, 255, 255, 0) !important;
+  outline: none;
+  box-shadow: none !important;
+}
 .return-back{
   position: fixed;
   bottom: 20px;
@@ -382,6 +396,10 @@ p{
 .items-list-col-2 .list-item:last-child{
   border-bottom: 1px solid #62E3DB;
 }
+/*== Roadmap ==*/
+#roadmap{
+  padding-top: 100px;
+}
 .roadmap-title{
   font-family: var(--fontfamily);
   font-weight: 400;
@@ -454,6 +472,10 @@ p{
 .roadmap-box  img{
   margin-top: -40px;
 }
+/*== About ==*/
+#about{
+  padding-top: 80px;
+}
 .about-us h2{
   font-family: var(--fontfamily);
   font-weight: 400;
@@ -468,36 +490,33 @@ p{
   position: relative;
   padding: 0px 10px 0px 40px;
 }
-.about-section-nav{
+.nav-container{
   position: absolute;
-  left: -8px;
+  left: -6px;
   text-align: left;
-  height: 100vh;
+  height: 100%;
+  width: 6px;
 }
-.about-section-nav ul{
-  padding: 0px;
-  list-style-type: none;
-}
-.about-section-nav ul li.active{
+.nav-container .tns-nav-active{
   background: #FF2ACC;
   box-shadow: 0px 4px 34px rgba(255, 47, 159, 0.4);
   opacity: 1;
 }
-.about-section-nav ul li{
+.nav-container div{
   padding: 0px;
   list-style-type: none;
-  height: 18vh;
+  height: 23%;
   background: #FFFFFF;
   opacity: 0.2;
   margin-bottom: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
-.about-section-nav ul a{
+.nav-container div span{
   font-size: 14px;
   writing-mode: vertical-rl;
   width: 5px;
-  height: 18vh;
-  color: transparent;
+  color: rgba(255, 255, 255, 0);
 }
 .about-content-sections .link-active:focus,
 .about-content-sections .link-active:active,
