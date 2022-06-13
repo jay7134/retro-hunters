@@ -1,6 +1,10 @@
-import React, {useEffect, useState } from 'react';
+import React, {useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
+import Typed from "react-typed";
+import $ from 'jquery';
 const Join_the_hunt = () => {
+    const WEBURL = useRef(0);
+    //console.log(WEBURL.current);
     //const [refCode, setrefCode] = useState("");
     //const [connect, setconnect] = useState("");
     /*
@@ -14,6 +18,9 @@ const Join_the_hunt = () => {
         return () => clearTimeout(timer);
     }, []);*/
     const join_hunt = () => {
+        WEBURL.current++;
+        //console.log(WEBURL.current);
+        document.getElementById("btn-txt-heading").classList.add("d-none");
         document.getElementById("join-the-hunt-into").classList.add("d-none");
         document.getElementById("bg_img").classList.remove("d-none");
         document.getElementById("bg_img").src="/images/join_hunt_1.jpg";
@@ -43,12 +50,26 @@ const Join_the_hunt = () => {
     return(
         <>
         <div className='join-the-hunt-into' id='join-the-hunt-into'>
-        <video className="RH-entry-video" autoPlay muted>
-            <source src="/videos/RH-entry.mp4" type='video/mp4' />
+        <video className="RH-entry-video" autoPlay loop muted>
+            <source src="/videos/RH-home-1.mp4" type='video/mp4' />
         </video>
-        <button className='btn btn-join-hunt' onClick={join_hunt}>Join the hunt</button>
+        
         </div>
         <img id='bg_img' className='img-fluid d-none' src='/images/bg-3.jpg' alt='retro hunters bg' width={1920} height={1080} />
+        
+        <h1 id='btn-txt-heading' className="heading-text">
+            <button className='btn text-link' onClick={join_hunt}>
+            <Typed
+                strings={[
+                        "Join The Hunt",
+                    ]}
+                    typeSpeed={150}
+                    backSpeed={100}
+                    
+                    />
+            </button>
+        </h1>
+     
         <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
                 <div className="row align-items-center vh-100">
