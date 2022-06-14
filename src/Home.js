@@ -1,15 +1,10 @@
 import React, {useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 function Home(){
     useEffect(() => {
-        const timer = setTimeout(() => {
-            document.getElementById("RH-entry-video").classList.add("d-none");
-            document.getElementById("bg_img").classList.add("animate__fadeIn");
-            document.getElementById("bg_img").classList.remove("d-none");            
-        }, 8000);
-        return () => clearTimeout(timer);
+        $(".main-wrapper").addClass("d-none");
     }, []);
-
     return(
         <>
         
