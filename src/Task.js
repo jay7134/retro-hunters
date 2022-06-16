@@ -82,15 +82,15 @@ const Task = () => {
     }
     return(
         <>
-        <img id='bg_img' className='img-fluid' src='/images/join_hunt_1.jpg' alt='retro hunters bg' width={1920} height={1080} />
+        <img id='bg_img' className='img-fluid' src='/images/join_hunt_2.jpg' alt='retro hunters bg' width={1920} height={1080} />
         
         <section id="task" className="rh-task">
             <div className="container">
                 <div className="row align-items-center vh-100 align-middle">
                     <div className='col-md-8 offset-md-2'>
                         
-                        <div id="clown-box" className='section-clown animate__animated animate__zoomIn animate__delay-2s'>
-                        <video className='clown-video img-fluid' autoPlay loop muted>
+                        <div id="clown-box" className='video-playbox section-clown ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-2s'>
+                        <video className='clown-video embed-responsive-item' autoPlay loop muted>
                             <source src="/videos/RH-Glitch-Clown.mp4" type='video/mp4' />
                         </video>
                         </div>
@@ -188,7 +188,7 @@ const Task = () => {
             </div>
         </section>
         <div className='return-back animate__animated animate__slideInLeft animate__delay-2s'>
-            <h5><Link to="/">RETURN TO WEBSITE</Link></h5>
+            <h5><a href="/join-the-hunt">RETURN TO WEBSITE</a></h5>
         </div>
         </>
     );

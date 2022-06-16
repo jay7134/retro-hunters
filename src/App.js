@@ -14,18 +14,13 @@ function App() {
     <>
     <Router>
     <Fragment>
-    <div className="App">
-    <Routes>
-        <Route exact path="/" element={<Header/>}/>
-        <Route path="/about" element={<Header/>}/>
-        <Route path="/roadmap" element={<Header/>}/>
-    </Routes>    
+    <div className="App"> 
       <div className="page-content">
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path="/roadmap" element={<Roadmap/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/join-the-hunt" element={<Join_the_hunt/>}/>
+        <Route path="/join-the-hunt" element={<><Header/><Join_the_hunt/></>}/>
         <Route path="/task" element={<Task/>}/>
         <Route path="/arcade" element={<Arcade/>}/>
       </Routes>

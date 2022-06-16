@@ -90,6 +90,7 @@ p{
   bottom: 30px;
   right: 30px;
 }
+.heading-text a,
 .heading-text button{
   font-family: var(--fontfamily);
   font-weight: 400;
@@ -102,6 +103,7 @@ p{
   padding: 20px 40px;
   box-shadow: none !important;
   outline: none !important;
+  text-decoration: none !important;
 }
 .RH-entry-video{
   position: fixed;
@@ -120,10 +122,13 @@ p{
   width: 100%;
   text-align: center;
   bottom: 30%;
-}
-.enter-website-links a{
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
   padding: 230px 200px;
+}
+.enter-website-links:active,
+.enter-website-links:focus,
+.enter-website-links:hover{
+  color: rgba(0, 0, 0, 0);
 }
 /*== Join the hunt ==*/
 .btn-join-hunt {
@@ -162,6 +167,9 @@ p{
   top: 0;
   left: 0;
   z-index: -1;
+}
+.video-playbox{
+  margin-top: 80px;
 }
 #join-box{
   padding: 10px 50px;
@@ -311,12 +319,6 @@ p{
 /*== Task ==*/
 #clown-box{
   text-align: center;
-}
-.clown-video{
-  padding-top: 100px;
-  width: 100%;
-  margin-top: 0px;
-  max-width: 600px;
 }
 #tasks-section{
   background-image: url('../public/images/RH-ref.jpg');

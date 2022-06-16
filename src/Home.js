@@ -1,26 +1,23 @@
 import React, {useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import $ from 'jquery';
 function Home(){
-    useEffect(() => {
-        $(".main-wrapper").addClass("d-none");
-    }, []);
     return(
         <>
         
-        <img id="bg_img" className='img-fluid d-none animate__animated' src='/images/arcade.jpg' alt='retro hunters bg' width={1920} height={1080} />
+        <img id="bg_img" className='img-fluid d-none animate__animated' src='/images/bg-1.jpg' alt='retro hunters bg' width={1920} height={1080} />
         <video id="RH-entry-video" className="RH-entry-video" autoPlay muted>
-            <source src="/videos/RH-arcade.mp4" type='video/mp4' />
+            <source src="/videos/RH-home-entry.mp4" type='video/mp4' />
+        </video>
+        <video id="RH-entry-join" className="RH-entry-video d-none" autoPlay loop muted>
+            <source src="/videos/RH-home-1.mp4" type='video/mp4' />
         </video>
         <section id="Home-page" className="rh-home">
             <div className="container">
                 <div className="row">
-                    <div className="column">
-                        <h2 className="text-center enter-website-links">
-                            <Link  to="/join-the-hunt">
+                    <div className="column entry-1">
+                        <Link to="/join-the-hunt" className="text-center enter-website-links">
                                 Enter the website
-                            </Link> 
-                        </h2>
+                        </Link>
                     </div>
                 </div>               
             </div>

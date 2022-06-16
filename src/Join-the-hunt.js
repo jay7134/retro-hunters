@@ -19,14 +19,20 @@ const Join_the_hunt = () => {
     }, []);*/
     const join_hunt = () => {
         WEBURL.current++;
-        //console.log(WEBURL.current);
+        $(".main-wrapper").addClass("d-none");
         document.getElementById("btn-txt-heading").classList.add("d-none");
         document.getElementById("join-the-hunt-into").classList.add("d-none");
         document.getElementById("bg_img").classList.remove("d-none");
         document.getElementById("bg_img").src="/images/join_hunt_1.jpg";
-        document.getElementById("join-box").classList.add("animate__fadeInUp");
+        //$("#machine-entry").removeClass("d-none");
+
+        $(".video-playbox").removeClass("d-none").addClass("animate__zoomIn");
+        $(".video-playbox video").html('<source src="/videos/RH-join-entry.mp4" type="video/mp4" />');
+        setTimeout(() => {
+            $(".video-playbox").addClass("d-none");
+            $("#join-box").addClass("animate__zoomIn").removeClass("d-none");
+        }, 2000);
         document.getElementById("bg_img").src="/images/join_hunt_2.jpg";
-        document.getElementById("join-box").classList.remove("d-none");
         document.getElementById("return-back").classList.remove("d-none");
     }
     const setReferralCode = ()=>{
@@ -74,8 +80,10 @@ const Join_the_hunt = () => {
             <div className="container">
                 <div className="row align-items-center vh-100">
                     <div className='col-md-8 offset-md-2'>
-                        
-                        <div id="join-box" className='d-none animate__animated animate__delay-2s'>
+                        <div className="video-playbox ratio ratio-16x9 d-none animate__animated animate__delay-1s">
+                            <video className="embed-responsive-item" autoPlay muted></video>
+                        </div>
+                        <div id="join-box" className='d-none animate__animated animate__delay-3s'>
                             <div id='referral-code-section'>
                                 <h2>ENTER YOUR REFERRAL CODE</h2>
                                 <input type="text" className='input'/>
@@ -121,7 +129,7 @@ const Join_the_hunt = () => {
             </div>
         </section>
         <div id="return-back" className='return-back animate__animated animate__slideInLeft d-none'>
-            <h5><Link to="/">RETURN TO WEBSITE</Link></h5>
+            <h5><a href="/join-the-hunt">RETURN TO WEBSITE</a></h5>
         </div>
         </>
     );
