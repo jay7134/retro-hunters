@@ -65,6 +65,9 @@ const Arcade = () => {
   return (
     <>
     <img id='bg_img' className='img-fluid' src='/images/arcade.jpg' alt='retro hunters bg' width={1920} height={1080} />
+    <video id="RH-entry-video-2" className="RH-loop-entry-video" autoPlay loop muted>
+        <source src="/videos/Looping-arcade-machine.mp4" type='video/mp4' />
+    </video>
     <section id="join-the-hunt" className="sec-pad-lg">
         <div className="container">
             <div className="row align-items-center">
@@ -75,7 +78,7 @@ const Arcade = () => {
                 ) : (
                 <Login onLoggedIn={handleLoggedIn} />
                 )}*/}
-                <h2 className="text-center arcade-links"><Link  to="/">Enter the website</Link> <Link  to="/join">Join the hunt</Link></h2>
+                <h2 className="text-center arcade-links"><Link  to="/join-the-hunt" state={{ from: "RH_arcade" }}>Join the hunt</Link></h2>
                 </div>
             </div>
         </div>

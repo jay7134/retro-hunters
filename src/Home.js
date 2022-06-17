@@ -21,7 +21,7 @@ function Home(){
             <div className="container">
                 <div className="row">
                     <div className="column entry-1">
-                        <Link to="/join-the-hunt" className="text-center enter-website-links">
+                        <Link to="/join-the-hunt" state={{ from: "RH_home" }} className="text-center enter-website-links">
                                 Enter the website
                         </Link>
                     </div>

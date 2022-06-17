@@ -188,7 +188,7 @@ const Task = () => {
             </div>
         </section>
         <div className='return-back animate__animated animate__slideInLeft animate__delay-2s'>
-            <h5><a href="/join-the-hunt">RETURN TO WEBSITE</a></h5>
+            <h5><Link to="/arcade">RETURN TO WEBSITE</Link></h5>
         </div>
         </>
     );

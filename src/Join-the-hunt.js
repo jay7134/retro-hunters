@@ -2,8 +2,16 @@ import React, {useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import Typed from "react-typed";
 import $ from 'jquery';
+import { useLocation } from "react-router-dom";
 const Join_the_hunt = () => {
+    const location = useLocation();
+  const { from } = location.state;
+  console.log(from);
     const WEBURL = useRef(0);
+    //const location = useLocation("value");
+    //const Name = location.state.value;
+//console.log({Name});
+
     //console.log(WEBURL.current);
     //const [refCode, setrefCode] = useState("");
     //const [connect, setconnect] = useState("");
@@ -57,7 +65,7 @@ const Join_the_hunt = () => {
         <>
         <div className='join-the-hunt-into' id='join-the-hunt-into'>
         <video className="RH-entry-video" autoPlay loop muted>
-            <source src="/videos/RH-home-1.mp4" type='video/mp4' />
+            <source src="/videos/RH-home-entry.mp4" type='video/mp4' />
         </video>
         
         </div>
@@ -129,7 +137,7 @@ const Join_the_hunt = () => {
             </div>
         </section>
         <div id="return-back" className='return-back animate__animated animate__slideInLeft d-none'>
-            <h5><a href="/join-the-hunt">RETURN TO WEBSITE</a></h5>
+            <h5><Link to="/arcade">RETURN TO WEBSITE</Link></h5>
         </div>
         </>
     );
