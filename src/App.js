@@ -18,8 +18,8 @@ function App() {
       <div className="page-content">
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route path="/roadmap" element={<Roadmap/>}/>
-        <Route path="/about" element={<About/>}/>
+        <Route path="/roadmap" element={<><Header/><Roadmap/></>}/>
+        <Route path="/about" element={<><Header/><About/></>}/>
         <Route path="/join-the-hunt" element={<><Header/><Join_the_hunt/></>}/>
         <Route path="/task" element={<Task/>}/>
         <Route path="/arcade" element={<Arcade/>}/>
