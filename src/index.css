@@ -133,6 +133,20 @@ p{
   color: rgba(0, 0, 0, 0);
 }
 /*== Join the hunt ==*/
+.back-to-arcade {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  bottom: 120px;
+  width: 100%;
+  max-width: 420px;
+}
+.back-to-arcade a{
+  padding: 360px 30px 0px 80px;
+  color: rgba(255, 255, 255, 0) !important;
+  outline: none;
+  box-shadow: none !important;
+}
 .btn-join-hunt {
   position: absolute;
   bottom: 5%;
@@ -538,22 +552,7 @@ p{
   color: #1FFDF4;
 }
 /*== arcade ==*/
-.arcade-links {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  left: 0;
-  bottom: 20%;
-}
-.arcade-links a{
-  font-size: 24px;
-  padding: 20px;
-  color: transparent;
-}
-.arcade-links a:first-child{
-  margin-left: -20px;
-  padding-right: 0px;
-}
+
 @media(min-width: 768px){
 
 }

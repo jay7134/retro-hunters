@@ -5,28 +5,20 @@ import $ from 'jquery';
 import { useLocation } from "react-router-dom";
 const Join_the_hunt = () => {
     const location = useLocation();
-  const { from } = location.state;
-  console.log(from);
+    const { from } = location.state;
     const WEBURL = useRef(0);
-    //const location = useLocation("value");
-    //const Name = location.state.value;
-//console.log({Name});
-
-    //console.log(WEBURL.current);
-    //const [refCode, setrefCode] = useState("");
-    //const [connect, setconnect] = useState("");
-    /*
     useEffect(() => {
-        const timer = setTimeout(() => {
-            document.getElementById("bg_img").src="/images/join_hunt_1.jpg";
-            document.getElementById("join-box").classList.add("animate__fadeInUp");
-            document.getElementById("bg_img").src="/images/join_hunt_2.jpg";
-            document.getElementById("join-box").classList.remove("d-none");
+        if(from === "RH_arcade"){
+            $("button.text-link").trigger("click");
+        }
+        setTimeout(() => {
+            $("#entry_point").addClass("d-none");
+            $("#entry_loop").removeClass("d-none");
         }, 2000);
-        return () => clearTimeout(timer);
-    }, []);*/
+    }, []); 
     const join_hunt = () => {
         WEBURL.current++;
+        $(".back-to-arcade").addClass("d-none");
         $(".main-wrapper").addClass("d-none");
         document.getElementById("btn-txt-heading").classList.add("d-none");
         document.getElementById("join-the-hunt-into").classList.add("d-none");
@@ -38,7 +30,7 @@ const Join_the_hunt = () => {
         $(".video-playbox video").html('<source src="/videos/RH-join-entry.mp4" type="video/mp4" />');
         setTimeout(() => {
             $(".video-playbox").addClass("d-none");
-            $("#join-box").addClass("animate__zoomIn").removeClass("d-none");
+            $("#join-box").addClass("animate__fadeIn").removeClass("d-none");
         }, 2000);
         document.getElementById("bg_img").src="/images/join_hunt_2.jpg";
         document.getElementById("return-back").classList.remove("d-none");
@@ -64,20 +56,25 @@ const Join_the_hunt = () => {
     return(
         <>
         <div className='join-the-hunt-into' id='join-the-hunt-into'>
-        <video className="RH-entry-video" autoPlay loop muted>
+        <video id="entry_point" className="RH-entry-video" autoPlay muted>
+            <source src="/videos/entry_Transition.mp4" type='video/mp4' />
+        </video>
+        <video id="entry_loop" className="RH-entry-video d-none" autoPlay loop muted>
             <source src="/videos/RH-home-entry.mp4" type='video/mp4' />
         </video>
         
         </div>
         <img id='bg_img' className='img-fluid d-none' src='/images/bg-3.jpg' alt='retro hunters bg' width={1920} height={1080} />
-        
-        <h1 id='btn-txt-heading' className="heading-text">
+        <div className='back-to-arcade'>
+            <Link to="/arcade">Back to arcade</Link>
+        </div>
+        <h1 id='btn-txt-heading' className="heading-text animate__animated animate__fadeInRight animate__delay-2s">
             <button className='btn text-link' onClick={join_hunt}>
             <Typed
                 strings={[
-                        "Join The Hunt",
+                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Join The Hunt",
                     ]}
-                    typeSpeed={150}
+                    typeSpeed={300}
                     backSpeed={100}
                     
                     />
@@ -91,7 +88,7 @@ const Join_the_hunt = () => {
                         <div className="video-playbox ratio ratio-16x9 d-none animate__animated animate__delay-1s">
                             <video className="embed-responsive-item" autoPlay muted></video>
                         </div>
-                        <div id="join-box" className='d-none animate__animated animate__delay-3s'>
+                        <div id="join-box" className='d-none animate__animated animate__delay-2s'>
                             <div id='referral-code-section'>
                                 <h2>ENTER YOUR REFERRAL CODE</h2>
                                 <input type="text" className='input'/>

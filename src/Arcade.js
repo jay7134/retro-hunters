@@ -78,7 +78,7 @@ const Arcade = () => {
                 ) : (
                 <Login onLoggedIn={handleLoggedIn} />
                 )}*/}
-                <h2 className="text-center arcade-links"><Link  to="/join-the-hunt" state={{ from: "RH_arcade" }}>Join the hunt</Link></h2>
+                <h2 className="text-center arcade-links"><Link  to="/join-the-hunt" state={{ from: "RH_arcade" }} className="text-center enter-website-links">Join the hunt</Link></h2>
                 </div>
             </div>
         </div>
