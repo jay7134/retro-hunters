@@ -84,10 +84,11 @@ const Join_the_hunt = () => {
         <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
                 <div className="row align-items-center vh-100">
-                    <div className='col-lg-12 col-md-8 offset-md-2'>
-                        <div className="video-playbox ratio ratio-16x9 d-none animate__animated animate__delay-1s">
-                            <video className="embed-responsive-item" autoPlay muted></video>
-                        </div>
+                    <div className="video-playbox ratio ratio-16x9 d-none animate__animated animate__delay-1s">
+                        <video className="embed-responsive-item" autoPlay loop muted></video>
+                    </div>
+                    <div className='col-md-8 offset-md-2'>
+                
                         <div id="join-box" className='d-none animate__animated animate__delay-2s'>
                             <div id='referral-code-section'>
                                 <h2>ENTER YOUR REFERRAL CODE</h2>

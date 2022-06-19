@@ -185,7 +185,9 @@ p{
   z-index: -1;
 }
 .video-playbox{
-  margin-top: 80px;
+  margin-top: 12% !important;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 #join-box{
   padding: 10px 50px;
