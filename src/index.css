@@ -118,14 +118,18 @@ p{
 }
 .enter-website-links{
   position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
+  width: 50%;
   text-align: center;
   bottom: 80px;
   top: 5%;
   color: rgba(0, 0, 0, 0);
   padding: 230px 200px;
+}
+.enter-website-links:first-child{
+  left: 0;
+}
+.enter-website-links:last-child{
+  right: 0;
 }
 .enter-website-links:active,
 .enter-website-links:focus,
@@ -142,7 +146,7 @@ p{
   max-width: 420px;
 }
 .back-to-arcade a{
-  padding: 360px 30px 0px 80px;
+  padding: 360px 30px 0px 250px;
   color: rgba(255, 255, 255, 0) !important;
   outline: none;
   box-shadow: none !important;

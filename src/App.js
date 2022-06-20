@@ -9,6 +9,7 @@ import Home from './Home';
 import 'animate.css';
 import Task from './Task';
 import Arcade from './Arcade';
+import Main from './Main';
 function App() {
   return (
     <>
@@ -20,7 +21,8 @@ function App() {
         <Route exact path="/" element={<Home/>}/>
         <Route path="/roadmap" element={<><Header/><Roadmap/></>}/>
         <Route path="/about" element={<><Header/><About/></>}/>
-        <Route path="/join-the-hunt" element={<><Header/><Join_the_hunt/></>}/>
+        <Route path="/home" element={<><Header/><Main/></>}/>
+        <Route path="/join-the-hunt" element={<Join_the_hunt/>}/>
         <Route path="/task" element={<Task/>}/>
         <Route path="/arcade" element={<Arcade/>}/>
       </Routes>

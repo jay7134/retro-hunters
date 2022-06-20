@@ -1,21 +1,18 @@
 import React, {useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
-import Typed from "react-typed";
 import $ from 'jquery';
 import { useLocation } from "react-router-dom";
 const Join_the_hunt = () => {
-    const location = useLocation();
-    const { from } = location.state;
-    const WEBURL = useRef(0);
+    //const location = useLocation();
+    //const { from } = location.state;
+    //const WEBURL = useRef(0);
     useEffect(() => {
-        if(from === "RH_arcade"){
-            $("button.text-link").trigger("click");
-        }
         setTimeout(() => {
-            $("#entry_point").addClass("d-none");
-            $("#entry_loop").removeClass("d-none");
+            $(".video-playbox").addClass("d-none");
+            $("#join-box").addClass("animate__fadeIn").removeClass("d-none");
         }, 2000);
     }, []); 
+    {/*
     const join_hunt = () => {
         WEBURL.current++;
         $(".back-to-arcade").addClass("d-none");
@@ -34,7 +31,7 @@ const Join_the_hunt = () => {
         }, 2000);
         document.getElementById("bg_img").src="/images/join_hunt_2.jpg";
         document.getElementById("return-back").classList.remove("d-none");
-    }
+    }*/}
     const setReferralCode = ()=>{
         console.log("entered referral code");
     }
@@ -55,6 +52,7 @@ const Join_the_hunt = () => {
     }
     return(
         <>
+        {/*
         <div className='join-the-hunt-into' id='join-the-hunt-into'>
         <video id="entry_point" className="RH-entry-video" autoPlay muted>
             <source src="/videos/entry_Transition.mp4" type='video/mp4' />
@@ -79,13 +77,15 @@ const Join_the_hunt = () => {
                     
                     />
             </button>
-        </h1>
-     
+        </h1>*/}
+        <img id='bg_img' className='img-fluid' src='/images/join_hunt_1.jpg' alt='retro hunters bg' width={1920} height={1080} />
         <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
                 <div className="row align-items-center vh-100">
-                    <div className="video-playbox ratio ratio-16x9 d-none animate__animated animate__delay-1s">
-                        <video className="embed-responsive-item" autoPlay loop muted></video>
+                    <div className="video-playbox ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-1s">
+                        <video className="embed-responsive-item" autoPlay loop muted>
+                            <source src="/videos/RH-join-entry.mp4" type="video/mp4" />
+                        </video>
                     </div>
                     <div className='col-md-8 offset-md-2'>
                 
@@ -134,8 +134,8 @@ const Join_the_hunt = () => {
                 </div>
             </div>
         </section>
-        <div id="return-back" className='return-back animate__animated animate__slideInLeft d-none'>
-            <h5><Link to="/arcade">RETURN TO WEBSITE</Link></h5>
+        <div id="return-back" className='return-back animate__animated animate__slideInLeft animate__delay-1s'>
+            <h5><Link to="/home">RETURN TO WEBSITE</Link></h5>
         </div>
         </>
     );
