@@ -558,9 +558,22 @@ p{
   color: #1FFDF4;
 }
 /*== arcade ==*/
-
+@media(min-width: 1600px) and (max-width: 3000px){
+  #jconnection-section h2{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  #connection-section h4{
+    margin-top: 40px;
+  }
+}
 @media(min-width: 768px){
 
+}
+@media(max-width: 1400px){
+  .video-playbox{
+    max-width: 780px !important;
+  }
 }
 @media(max-width:991px){
   .navbar-dark .navbar-toggler{

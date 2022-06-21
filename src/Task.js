@@ -187,7 +187,7 @@ const Task = () => {
                 </div>
             </div>
         </section>
-        <div className='return-back animate__animated animate__slideInLeft animate__delay-2s'>
+        <div className='return-back animate__animated animate__slideInLeft animate__delay-1s'>
             <h5><Link to="/home">RETURN TO WEBSITE</Link></h5>
         </div>
         </>
