@@ -194,7 +194,11 @@ p{
   margin: 0 auto;
 }
 #join-box{
-  padding: 10px 50px;
+  margin-top: 100px !important;
+  padding: 30px 40px 40px;
+  background-image: url('../public/images/RH-ScreenGlitchOnly.gif');
+  background-size: cover;
+  background-position: center;
 }
 #join-box #referral-code-section{
   margin-top: 80px;
@@ -343,12 +347,13 @@ p{
   text-align: center;
 }
 #tasks-section{
-  background-image: url('../public/images/RH-ref.jpg');
+  background-image: url('../public/images/RH-ScreenGlitchOnly.gif');
   background-size: cover;
   background-position: center;
 }
 #tasks-section .tasks-inner{
-  padding: 15px 30px 10px;
+  margin-top: 50px;
+  padding: 20px 40px 30px;
 }
 #tasks-section h4{
   font-family: var(--fontfamily);
@@ -558,10 +563,10 @@ p{
   color: #1FFDF4;
 }
 /*== arcade ==*/
-@media(min-width: 1600px) and (max-width: 3000px){
+@media only screen and (min-width: 1440px){
   #jconnection-section h2{
-    margin-top: 30px;
-    margin-bottom: 50px;
+    padding-top: 60px;
+    margin-bottom: 40px;
   }
   #connection-section h4{
     margin-top: 40px;

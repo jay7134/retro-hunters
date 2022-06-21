@@ -87,7 +87,7 @@ const Join_the_hunt = () => {
                             <source src="/videos/RH-join-entry.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <div className='col-md-8 offset-md-2'>
+                    <div className='col-md-10 offset-md-1'>
                 
                         <div id="join-box" className='d-none animate__animated animate__delay-2s'>
                             <div id='referral-code-section'>
