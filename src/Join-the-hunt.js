@@ -78,8 +78,8 @@ const Join_the_hunt = () => {
                     />
             </button>
         </h1>*/}
-        <img id='bg_img' className='img-fluid' src='/images/join_hunt_1.jpg' alt='retro hunters bg' width={1920} height={1080} />
-        <section id="join-the-hunt" className="sec-pad-lg">
+        <img id='bg_img' className='img-fluid bg_join_arcade' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
+        <section id="join-the-hunt" className="sec-pad-lg bg_gif">
             <div className="container">
                 <div className="row align-items-center vh-100">
                     <div className="video-playbox ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-1s">
@@ -87,7 +87,7 @@ const Join_the_hunt = () => {
                             <source src="/videos/RH-join-entry.mp4" type="video/mp4" />
                         </video>
                     </div>
-                    <div className='col-md-10 offset-md-1'>
+                    <div className='col-md-8 offset-md-2'>
                 
                         <div id="join-box" className='d-none animate__animated animate__delay-2s'>
                             <div id='referral-code-section'>

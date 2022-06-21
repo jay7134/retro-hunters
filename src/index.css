@@ -194,11 +194,17 @@ p{
   margin: 0 auto;
 }
 #join-box{
-  margin-top: 100px !important;
-  padding: 30px 40px 40px;
+  margin-top: 40px !important;
+  padding: 20px 40px 20px;
+}
+.bg_join_arcade{
+  z-index: 0 !important;
+}
+.bg_gif{
   background-image: url('../public/images/RH-ScreenGlitchOnly.gif');
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #join-box #referral-code-section{
   margin-top: 80px;
@@ -346,14 +352,9 @@ p{
 #clown-box{
   text-align: center;
 }
-#tasks-section{
-  background-image: url('../public/images/RH-ScreenGlitchOnly.gif');
-  background-size: cover;
-  background-position: center;
-}
 #tasks-section .tasks-inner{
   margin-top: 50px;
-  padding: 20px 40px 30px;
+  padding: 10px 20px 10px;
 }
 #tasks-section h4{
   font-family: var(--fontfamily);

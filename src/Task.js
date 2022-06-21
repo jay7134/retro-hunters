@@ -82,9 +82,9 @@ const Task = () => {
     }
     return(
         <>
-        <img id='bg_img' className='img-fluid' src='/images/join_hunt_2.jpg' alt='retro hunters bg' width={1920} height={1080} />
+        <img id='bg_img' className='img-fluid bg_join_arcade' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
         
-        <section id="task" className="rh-task">
+        <section id="task" className="rh-task bg_gif">
             <div className="container">
                 <div className="row align-items-center vh-100 align-middle">
                     <div className='col-md-8 offset-md-2'>
