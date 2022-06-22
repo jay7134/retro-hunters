@@ -86,14 +86,13 @@ const Task = () => {
         
         <section id="task" className="rh-task bg_gif">
             <div className="container">
-                <div className="row align-items-center vh-100 align-middle">
-                    <div className='col-md-8 offset-md-2'>
-                        
-                        <div id="clown-box" className='video-playbox section-clown ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-2s'>
+                <div className="row align-items-center vh-100">
+                    <div id="clown-box" className='video-playbox section-clown ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-1s'>
                         <video className='clown-video embed-responsive-item' autoPlay loop muted>
-                            <source src="/videos/RH-Glitch-Clown.mp4" type='video/mp4' />
+                            <source src="/videos/RH-Glitch-clown-2.mp4" type='video/mp4' />
                         </video>
-                        </div>
+                    </div>
+                    <div className='col-md-8 offset-md-2'>
                         <div id="tasks-section" className='d-none animate__animated animate__delay-1s'>
                         <div className='tasks-inner'>
                             <h4>COMPLETE YOUR TASKS BELOW TO<br/>
