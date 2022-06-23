@@ -6,13 +6,12 @@ const Task = () => {
     //const [connect, setconnect] = useState("");
     useEffect(() => {
         const timer = setTimeout(() => {
-            //document.getElementById("bg_img").src="/images/join_hunt_1.jpg";
-            
-            //document.getElementById("bg_img").src="/images/join_hunt_2.jpg";
-            document.getElementById("clown-box").classList.add("d-none");
-            document.getElementById("tasks-section").classList.add("animate__fadeInUp");
-            document.getElementById("tasks-section").classList.remove("d-none");
-        }, 4000);
+            $(".bg_join_arcade").removeClass("d-none");
+            $(".join-the-hunt-into").addClass("d-none");
+            $("#task").addClass("bg_gif");
+            $("#tasks-section").addClass("animate__fadeIn");
+            $("#tasks-section").removeClass("d-none");
+        }, 2000);
         return () => clearTimeout(timer);
     }, [tokenBalance]);
 
@@ -82,16 +81,16 @@ const Task = () => {
     }
     return(
         <>
-        <img id='bg_img' className='img-fluid bg_join_arcade' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
+        <div className='join-the-hunt-into' id='join-the-hunt-into'>
+        <video id="entry_point" className="RH-entry-video" autoPlay muted>
+            <source src="/videos/RH_Arcade_Glitch_Clown.mp4" type='video/mp4' />
+        </video>
+        </div>
+        <img id='bg_img' className='img-fluid bg_join_arcade d-none' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
         
-        <section id="task" className="rh-task bg_gif">
+        <section id="task" className="rh-task">
             <div className="container">
                 <div className="row align-items-center vh-100">
-                    <div id="clown-box" className='video-playbox section-clown ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-1s'>
-                        <video className='clown-video embed-responsive-item' autoPlay loop muted>
-                            <source src="/videos/RH-Glitch-clown-2.mp4" type='video/mp4' />
-                        </video>
-                    </div>
                     <div className='col-md-8 offset-md-2'>
                         <div id="tasks-section" className='d-none animate__animated animate__delay-1s'>
                         <div className='tasks-inner'>
