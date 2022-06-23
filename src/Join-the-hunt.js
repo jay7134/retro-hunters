@@ -8,7 +8,9 @@ const Join_the_hunt = () => {
     //const WEBURL = useRef(0);
     useEffect(() => {
         setTimeout(() => {
-            $(".video-playbox").addClass("d-none");
+            $(".bg_join_arcade").removeClass("d-none");
+            $(".join-the-hunt-into").addClass("d-none");
+            $("#join-the-hunt").addClass("bg_gif");
             $("#join-box").addClass("animate__fadeIn").removeClass("d-none");
         }, 2000);
     }, []); 
@@ -82,9 +84,9 @@ const Join_the_hunt = () => {
                     
                     />
             </button>
-        </h1>
-        <img id='bg_img' className='img-fluid bg_join_arcade' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
-        */}
+        </h1>*/}
+        <img id='bg_img' className='img-fluid bg_join_arcade d-none' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
+        
         <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
                 <div className="row align-items-center vh-100">
