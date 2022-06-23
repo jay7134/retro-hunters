@@ -40,7 +40,7 @@ const Join_the_hunt = () => {
         console.log("No referral code");
         document.getElementById("referral-code-section").classList.add("d-none");
         document.getElementById("connection-section").classList.remove("d-none");
-        document.getElementById("connection-section").classList.add("animate__fadeInUp");
+        document.getElementById("connection-section").classList.add("animate__fadeIn");
     }
     const connectwallet = (target)=>{
         console.log("connect your wallet code");
@@ -52,6 +52,11 @@ const Join_the_hunt = () => {
     }
     return(
         <>
+        <div className='join-the-hunt-into' id='join-the-hunt-into'>
+        <video id="entry_point" className="RH-entry-video" autoPlay muted>
+            <source src="/videos/RH_join_page.mp4" type='video/mp4' />
+        </video>
+        </div>
         {/*
         <div className='join-the-hunt-into' id='join-the-hunt-into'>
         <video id="entry_point" className="RH-entry-video" autoPlay muted>
@@ -77,16 +82,18 @@ const Join_the_hunt = () => {
                     
                     />
             </button>
-        </h1>*/}
+        </h1>
         <img id='bg_img' className='img-fluid bg_join_arcade' src='/images/RH_arcade_1.png' alt='retro hunters bg' width={1920} height={1080} />
-        <section id="join-the-hunt" className="sec-pad-lg bg_gif">
+        */}
+        <section id="join-the-hunt" className="sec-pad-lg">
             <div className="container">
                 <div className="row align-items-center vh-100">
+                    {/*
                     <div className="video-playbox ratio ratio-16x9 animate__animated animate__zoomIn animate__delay-1s">
                         <video className="embed-responsive-item" autoPlay loop muted>
-                            <source src="/videos/RH-join-entry.mp4" type="video/mp4" />
+                            <source src="/videos/RH_join_page.mp4" type="video/mp4" />
                         </video>
-                    </div>
+                    </div>*/}
                     <div className='col-md-8 offset-md-2'>
                 
                         <div id="join-box" className='d-none animate__animated animate__delay-2s'>
