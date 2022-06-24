@@ -51,6 +51,8 @@ body {
   font-family: var(--fontfamily2);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  animation: fadeIn;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: var(--fontfamily);
